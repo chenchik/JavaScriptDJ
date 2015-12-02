@@ -8,20 +8,14 @@
 <!--<script src="https://cdn.rawgit.com/katspaugh/wavesurfer.js/master/dist/wavesurfer.min.js"></script>-->
 <script src="wavesurfer.js-master/dist/wavesurfer.min"></script>
 
-
-
-<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
-
 <script type="text/javascript" src="custom.js"></script>
-<script src="wavesurfer.min.js"></script>
 
 <style>
 </style>
 </head>
 <body>
 <div class="header">
-	<img id="headerIcon" src="images/handsome.jpg">
+	<!--img id="youtubeIcon" src="youtubeIcon.png"-->
 </div>
 
 
@@ -50,14 +44,7 @@
     
 		</form-->	
 		<h1>sound 1</h1>
-		<div id="wave">
-			<div class="progress progress-striped active" id="progress-bar">
-            	<div class="progress-bar progress-bar-info"></div>
-        	</div>
-        	
-		</div>
-		<audio id="sound1">
-		<button id='btn' class='button'>Play / Pause</button>
+		<audio id="sound1" controls>
 		</audio>
 		
 		<img id='image1'/>
@@ -67,17 +54,11 @@
 	<div class="col-md-4">	
 	
 		<div id="singleSliders">
-			<!--<input  type="range" value="100" orient="vertical" name="points" min="0" max="100" id="volume1" class="vertSlider">
-			<input  type="range" value="100" orient="vertical" name="points" min="0" max="100" id="volume2" class="vertSlider">-->
-			<div id="volume1" class="vertSlider" style="height:200px;"></div>
-			<div id="volume2" class="vertSlider" style="height:200px;"></div>
+			<input  type="range" value="100" orient="vertical" name="points" min="0" max="100" id="volume1" class="vertSlider">
+			<input  type="range" value="100" orient="vertical" name="points" min="0" max="100" id="volume2" class="vertSlider">
 		</div>
-		
-			
-		
 		<div>
-			<!--input  type="range" name="points" min="0" max="100" id="volumeBoth"-->
-			<div id="volumeBoth"></div>
+			<input  type="range" name="points" min="0" max="100" id="volumeBoth">
 		</div>
 	<!--onclick="adjustVol()"-->
 	</div>
@@ -92,17 +73,8 @@
     <br>
     </form>
 		<h1>sound 2</h1>
-		
-		<div id="wave1">
-			<div class="progress progress-striped active" id="progress-bar1">
-            	<div class="progress-bar1 progress-bar-info"></div>
-        	</div>
-        	
-		</div>
-		
-		<audio id="sound2">
+		<audio id="sound2" controls>
 		  </audio>
-		  <button id='btn1' class='button'>Play / Pause</button>
 		  <!--input  type="range" value="1" orient="vertical" name="points" min="0.8" max="1.5" step= "0.001" id="slowSlider2" class="vertSlider"
 		  onchange="updateTextInput2(this.value);">
 		  <input type="text" id="textInput2" value=""-->
