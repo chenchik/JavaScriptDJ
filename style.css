@@ -40,6 +40,7 @@ display: block;
 }
 audio{
 	width: 100%;
+	margin-top: 10px;
 }
 #textInput1{
 	width:100%;
@@ -56,7 +57,30 @@ img#headerIcon{
 ul#list {
     border: 1px solid grey;
     border-radius: 10px;
+	height: 286px;
+    overflow: auto;
 }
 #buttons{
-	margin-top:68px;
+	margin-top:46px;
+}
+footer{
+	margin-bottom: 20px;
+}
+#left-right-buttons{
+	margin-left: auto;
+    display: block;
+    width: 100px;
+}
+button, input, select, textarea{
+	margin-bottom: 10px;
+}
+img#loadingGif {
+    width: 100%;
+	display:none;
+}
+.lemons{
+	width: 100%;
+}
+div#silderCol {
+    text-align: center;
 }

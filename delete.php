@@ -21,6 +21,7 @@ if ($conn->connect_error) {
 $user = $_SERVER['REMOTE_ADDR'];
 //echo "filename is: " . $_FILE['songName'] . "<br>";
 $songName = $_POST['songName'];
+$songName = preg_replace("/[^a-zA-Z0-9-_.]/", " ", $songName);
 $songName = trim($songName);
 
 $file =  $_SERVER['DOCUMENT_ROOT'] . "/dj/javascriptDJ/mp3Files/".$songName;
@@ -38,10 +39,11 @@ $temp = $_SERVER['DOCUMENT_ROOT'] . "/dj/youtubeDJ/uploads/DAFT PUNK - AROUND TH
 echo $temp;
 echo "...end of path...";
 */
-echo "Biz Markie - Just a Friend.mp3...";
-echo $songName . "...";
+//echo "Biz Markie - Just a Friend.mp3...";
+echo "deleting..".$songName . "...";
 
-$result = $conn->query("DELETE FROM song WHERE Title = '$songName'");
+$result = $conn->query("DELETE FROM usersong WHERE Songid = (SELECT id FROM songs WHERE Title = '$songName')");
+$result = $conn->query("DELETE FROM songs WHERE Title = '$songName'");
 
 
 //if(ltrim($file,  " ")){

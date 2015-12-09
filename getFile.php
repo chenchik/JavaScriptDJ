@@ -10,7 +10,7 @@ if ($conn->connect_error) {
     die('Connect Error (' . $mysqli->connect_errno . ') '
             . $conn->connect_error);
 }
-$result = $conn->query("SELECT Path FROM song WHERE Title = '$q'");	
+$result = $conn->query("SELECT Path FROM songs WHERE Title = '$q'");	
 if($result->num_rows>0){
 	$array = $result->fetch_array();
   echo $array[0];
